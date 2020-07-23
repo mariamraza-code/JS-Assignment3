@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!-- Chap # 43-48 -->
+<!-- task-1 -->
+
+<!-- task-1 -->
+<div>
+  <a href="javascript.void(0)" onclick="onClick()">click here</a>
+</div>
+<!-- task-2 -->
+<div style="margin-top: 80px;">
+  <img onclick="purchase()" width="200px" height="200px" src="img/1.jpg" alt=""> 
+  <img onclick="purchase()"  width="200px" height="200px" src="img/2.jpg" alt="">
+  <img onclick="purchase()"  width="250px" height="200px" src="img/3.jpg" alt="">
+  <img onclick="purchase()"  width="200px " height="200px" src="img/4.jpg" alt="">
+  
+</div>
+
+<!-- task-3 -->
+
+<div style="margin-top: 50px;">
+  <table id="scoreTable">
+      <tr >
+          <th>Index</th>
+          <th>Name</th>
+          <th>Class</th>
+      </tr>
+      <tr>
+          <td>0</td>
+          <td>John</td>
+          <td>10</td>
+          <td><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+      <td>1</td>
+      <td>Doe</td>
+      <td>9</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Mark</td>
+          <td>10</td>
+          <td><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>James </td>
+          <td>8</td>
+          <td><button onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+  </table>
+</div>
+
+<!-- task-4 -->
+<div>
+
+
+
+   <img id="ImageButton" onmouseover="changeimg()" 
+    onmouseout="previousimg()" src="img/horse.jpg"  width="100%" alt="">
+</div>
+
+<!-- task5 -->
+<div style="margin-top: 50px;">
+  
+  <button  onClick="Click1()">Increase</button>
+  <button  onClick="Click2()">Decrease</button>
+  <p>Clicks : <a id="clk">0</a></p>
+
+</div>
+
+
+
+
+<!---------------- Displaying form data on submission -->
+<div class="container">
+  <h2>Display Form Data</h2>
+  <form name=details>
+      <div class="form-group">
+          <label for="fname">Enter First Name::</label>
+          <input type="text" class="form-control" id="fname" name=fname style="width: 500px;">
+      </div>
+      <div class="form-group">
+          <label for="lname">Enter Last Name:</label>
+          <input type="text" class="form-control" id="lname" name=lname style="width: 500px;">
+      </div>
+      <div class="form-group">
+          <label for="phnum">Enter Phone Number:</label>
+          <input type="text" class="form-control" id="phnum" name=phnum style="width: 500px;">
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="display();">Submit</button>
+  </form>
+</div>
+<br>
+<div class="container">
+  <div class="seemore">
+      <!------------------- Displaying full details of paragraph -->
+      <h2>Read More Read Less Button</h2>
+      <br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Phasellus imperdiet, nulla et dictum interdum, nisi lorem
+          egestas vitae scel<span id="dots">...</span><span id="more">erisque enim
+              ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
+              luctus
+              vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at
+              libero
+              sed
+              nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
+              fringilla
+              congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+  </div>
+  <button class="btn btn-primary" onclick="seeMore()" id="myBtn">Read more</button>
+</div>
+
+<!------------------- Images is Modal ----------------->
+<div class="container-fluid">
+  <h2 class="heading">Modal Images</h2>
+  <img id="myImg1" class="myImg" src="img/img1.jpg" style="width:100%;max-width:300px">
+  <img id="myImg2" class="myImg" src="img/img2.jpg" style="width:100%;max-width:300px">
+  <img id="myImg3" class="myImg" src="img/img3.jpg" style="width:100%;max-width:300px">
+  <img id="myImg4" class="myImg" src="img/img4.jpg" style="width:100%;max-width:300px">
+  <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="imgsrc">
+      <div id="caption"></div>
+  </div>
+</div>
+<br>
+
+<div class="container">
+  <h2>ZoomIn and ZoomOut font size</h2>
+  <p id="zoomm" class="seemore">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus imperdiet, nulla et dictum interdum, nisi lorem
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus imperdiet, nulla et dictum interdum, nisi lorem
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  </p>
+  <input type="button" value="+" class="btn btn-primary" onClick="zoomIn()" />
+  <input type="button" value="-" class="btn btn-primary" onClick="zoomOut()" />
+</div>
+
+
+
+
+<!-- DOM -->
+<div>
+  <h1>DOM</h1>
+  <div id="form-content" class="content">
+    <label for="first-name">First Name</label>
+    <input type="text" id="first-name" />
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" />
+    <label for="email">Email</label>
+    <input type="text" id="email" />
+  </div>
+  <div id="main-content" class="content">
+    <p class="render">First Name : Alex</p>
+    <p class="render" id="lastName">Last Name: Bank</p>
+    <p class="render">Email : alexbank@example.com</p>
+    <p class="render">Country : Pakistan</p>
+    <p class="render">contact : +92 300 1234567</p>
+  </div>
+</div>
+<div>
+  <h1>Result</h1>
+  <h2>Child Elements of "main-content"</h2>
+  <div id="child-elements"></div>
+  <h2>innerHTML of elements with class "render"</h2>
+  <div id="render-elements"></div>
+  <h2>Node type of "form-content"</h2>
+  <div id="node-type-of-form-content"></div>
+  <h2>Node type of "lastName" and node type of its child</h2>
+  <div id="node-type-of-last-name"></div>
+  <h2>Child Node of "lastName" after updation</h2>
+  <div id="child-node-of-last-name-update"></div>
+</div>
+
+
+ 
+     
+
+
+
+    <script src="app.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
